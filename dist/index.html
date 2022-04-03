@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - To-do-list Guide (sheBUILDS 2.0)</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>To Do List Generator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <main>
+    <input id="hide-btn" type="radio">
+    <label id="hide-btn-label" for"format-btn">Hide Guide</label>
+
+    <div id="to-do-list-input">
+      <div class="to-do-list-title"><input class="to-do-list-title" type="text" value="TO DO LIST"></div>
+
+      <div class="to-do-block"><p class="to-do-order">1.</p><input id="first-to-do" class="to-do-text" type="text" placeholder="Clean my room"></div>
+      <div class="to-do-block"><p class="to-do-order">2.</p><input class="to-do-text" type="text" placeholder="Read Chapter 10 and take note"></div>
+      <div class="to-do-block"><p class="to-do-order">3.</p><input class="to-do-text" type="text" placeholder="Finish..."></div>
+      <div class="to-do-block"><p class="to-do-order">4.</p><input class="to-do-text" type="text"></div>
+      <div class="to-do-block"><p class="to-do-order">5.</p><input class="to-do-text" type="text"></div>
+      <div class="to-do-block"><p class="to-do-order">6.</p><input class="to-do-text" type="text"></div>
+      <div class="to-do-block"><p class="to-do-order">7.</p><input class="to-do-text" type="text"></div>
+      <div class="to-do-block"><p class="to-do-order">8.</p><input class="to-do-text" type="text"></div>
+
+      <label id="motivation-label" for="motivation">Motivation</label>
+      <textarea id="motivation" placeholder="All our dreams can come true if we have the courage to pursue them. - Walt Disney" rows="3"></textarea>
+
+      <div id="save-btn-box"><input id="save-btn" type="button" value="Save" onClick="window.print()"></div>
+    </div>
+
+    <div id="hide-area"></div>
+
+     <button class="guide-btn" id="guide-welcome-btn" type="button">Welcome</button>
+    <div class="guide-page" id="guide-welcome">
+      <h2>Guide</h2>
+      <p>If you would like to <strong>follow a tutorial</strong> on how to craft an effective to do list, please refer to this guide! I will guide you step-by-step on how to fill in your to do list. To get started, simply flip to the next page using the <strong>'Step 1'</strong> button.</p>
+      <p>If you <strong>don't need a short tutorial</strong>, feel free to hide this guide using the <strong>'Hide Guide'</strong> button below.</p> 
+      <p><em>*Caution: Once the guide is hidden, you will have to reload your page to access it again.</em></p>
+    </div>
+
+    <button class="guide-btn" id="guide-step1-btn" type="button">Step 1</button>
+    <div class="guide-page" id="guide-step1">
+      <h2>1. Deciding a focus</h2>
+      <p>How do you plan to use this to do list? Will it be a daily to do list or an action plan for a specific project? Determine the <strong>focus</strong> of your list and change the title on the left.</p>
+      <p>Once finished, continue flipping to the subsequent pages until you hit the last one. Have fun crafting your to do list!</p>
+      <p><em>*Caution: Every time you edit the left-side list, this guide will switch back to its welcome page. You will have to open your according step again.</em></p>
+    </div>
+
+    <button class="guide-btn" id="guide-step2-btn" type="button">Step 2</button>
+    <div class="guide-page" id="guide-step2">
+      <h2>2. Choosing your tasks</h2>
+      <p>Now with your focus, think about the tasks that you <strong>need to complete</strong>. Make sure not to overload yourself with unnecessary tasks and that you actually plan to complete your to-dos.</p>
+      <p>Set a <strong>goal</strong> for yourself. How productive do you want to be? How much work would you like to handle? Having a clear expectation will help you be more mindful of completing your plan.</p>
+      <p>Reflect on your usual performance too. How productive can you 'realistically' be? Do you always plan 6 tasks for a day but only end up achieving 4 of them? Being <strong>aware of your actual performance</strong> will help you decide the right tasks to do.</p>
+    </div>
+
+    <button class="guide-btn" id="guide-step3-btn" type="button">Step 3</button>
+    <div class="guide-page" id="guide-step3">
+      <h2>3. Leading a life of balance</h2>
+      <p>Does any of you task look too vague or big? This kind of task can be intimidating, and you may not have a clear direction on how to handle it. An useful tip is to <strong>break them down</strong>. Instead of putting something broad like "prepare for the party", break it down into smaller tasks like "buy drinks and snacks" and "decorate the house with balloons".</p>
+      <p>Do every task on your list look huge and overwhelming? It helps to add in a few <strong>simple tasks</strong> like "clean my room" or "shower". Finishing these easily-crossed-out tasks can make you feel extra-productive!</p>
+    </div>
+
+    <button class="guide-btn" id="guide-step4-btn" type="button">Step 4</button>
+    <div class="guide-page" id="guide-step4">
+      <h2>4. Prioritizing is key</h2>
+      <p>Not every task holds the same level of importance. Decide on your <strong>most urgent task</strong> - something that is both important and needed to be completed right now - and place these tasks at the top of your list. Now you know where to focus most of your energy.</p>
+    </div>
+
+    <button class="guide-btn" id="guide-step5-btn" type="button">Step 5</button>
+    <div class="guide-page" id="guide-step5">
+      <h2>5. Some final trimming</h2>
+      <p>Instead of thinking just about "what to do", consider the "when" and "where" as well. For each task that you have come up with, add a few words to specify a <strong>when</strong> and <strong>where</strong> you would like to complete this task.</p>
+      <p>You can also add in any <strong>extra detail</strong> that you find necessary, such as a phone number/email for your "contact my professor to ask about my report" task, for example.</p>
+    </div>
+
+    <button class="guide-btn" id="guide-step6-btn" type="button">Step 6</button>
+    <div class="guide-page" id="guide-step6">
+      <h2>6. Don't forget about motivation!</h2>
+      <p><em>*This is an extra step, you may want to skip this if all you need is just a to do list.</em></p>
+      <p>Do you notice that below your to do list is a 'Motivation' section? Here, you can put in anything that can <strong>help motivate</strong> you. Maybe a reminder on why you are doing this, or some inspirational quotes you found on the Internet (I already put in one for you!)</p>
+      <p>You can plan a </strong>reward system</strong> too. Maybe you will get yourself some ice cream if you finish half of your tasks, then allow yourself to watch 2 K-Drama episodes once everything is finished. These rewards can be anything, as long as they can motivate you to get tasks done.</p>
+    </div>
+
+    <button class="guide-btn" id="guide-done-btn" type="button">Done</button>
+    <div class="guide-page" id="guide-done">
+      <h2>Done!</h2>
+      <p>Phew, what a long journey trying to craft a perfect to do list. The final step is to look at your list one last time to see whether you missed any task or whether you can delete/specify some of them.</p>
+      <p>If you believe that your version is set to go, then <strong>congrats!</strong> I wish you the best of luck in completing everything you've planned for yourself.</p>
+      <p>Hide this guide using the button below, then click <strong>'Save'</strong> (at the bottom of the list) to save your to do list.</p>
+      <p>A window should pop out, allowing you to print out your to do list. If you just want to save your list to your local storage, choose <strong>'Save as PDF'</strong> in the <strong>'Destination'</strong> dropdown menu. Your to do list will be downloaded as a PDF.</p>
+      <p><em>*Caution: Due to certain formatting, printing in Landscape layout is strongly encouraged!</em></p> 
+    </div>
+  </main>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>

@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Sriracha&display=swap');
+
+main {
+  display: grid;
+  grid-template-areas:
+    "input guide guide guide guide guide guide guide guide"
+    "input btn1 btn2 btn3 btn4 btn5 btn6 btn7 btn8"
+    "input hide hide hide hide hide hide hide hide";
+  font-family: 'Nunito', sans-serif;
+}
+
+p {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+/* Hide guide function */
+#hide-btn-label {
+  grid-area: hide;
+  margin-left: 90px;
+  margin-top: 1px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#hide-btn {
+  grid-area: hide;
+  margin: 10px 10px 10px 50px;
+  transform: scale(2);
+}
+
+#hide-btn:checked ~ #hide-area {
+  display: unset;
+}
+
+#hide-btn:checked ~ #to-do-list-input{
+  position: absolute;
+  margin: 5px 0 5px 29vw;
+}
+
+#hide-area {
+  position: absolute;
+  z-index: 11;
+  width: 100vw;
+  height: 580px;
+  background-color: white;
+  display: none;
+}
+
+/* Left side */
+#to-do-list-input {
+  grid-area: input;
+  z-index: 12;
+  width: 38vw;
+  height: fit-content;
+  margin-right: 10px;
+  padding: 0 20px 20px 10px;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.to-do-list-title {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 90%;
+  padding: 8px;
+  color: black;
+  border: none;
+  font-size: 28px;
+  font-family: inherit;
+  font-weight: 800;
+}
+
+.to-do-block {
+  display: flex;
+  height: 40px;
+  font-size: 20px;
+  font-family: inherit;
+}
+
+#first-to-do {
+  border-top: 2px solid black;
+}
+
+.to-do-order {
+  margin: auto 0px auto 0px;
+  font-weight: 600;
+}
+
+.to-do-text {
+  margin-left: 10px;
+  width: 100%;
+  border-top: none;
+  border-left: 2px solid black;
+  border-color: black;
+  padding-left: 8px;
+  font-size: 18px;
+  font-family: 'Sriracha', cursive;
+  letter-spacing: 1.2px;
+}
+
+.to-do-text:focus {
+  z-index: 13;
+  outline: none;
+  background-color: #d4d4d4;
+}
+
+.to-do-text::placeholder {
+  opacity: 0.4;
+}
+
+#motivation-label {
+  margin: 20px 0 5px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#motivation {
+  display: block;
+  width: 80%;
+  margin: 0 10% 10px 10%;
+  padding: 5px 10px;
+  border: 2px solid #141414;
+  font-size: 15px;
+  font-family: 'Sriracha', cursive;
+  line-height: 20px;
+  resize: none;
+}
+
+#motivation::placeholder {
+  opacity: 0.4;
+}
+
+#save-btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#save-btn {
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+#save-btn:hover {
+  cursor: pointer;
+}
+
+/*Right side */
+.guide-page {
+  grid-area: guide;
+  width: inherit;
+  margin-bottom: 10px;
+  background-color: #ffebf2;
+  padding: 5px 30px 20px 30px;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.guide-btn {
+  margin: 5px 5px 20px 5px;
+  border-radius: 28px;
+  border: 2px solid #f9c5d5;
+  box-shadow: 2px 2px 5px 1px #c0c0c0;
+  background-color: #f2789f;
+  opacity: 0.85;
+  padding: 5px 10px;
+  font-size: 15px;
+  color: white;
+}
+
+.guide-btn:focus {
+  opacity: 1;
+  background-color: #ec3b83;
+  border: 2px solid #ffffff;
+}
+
+.guide-btn:hover {
+  cursor: pointer;
+}
+
+/* Layering the guide pages */
+#guide-welcome {
+  z-index: 8;
+}
+
+#guide-step1 {
+  z-index: 7;
+}
+
+#guide-step2 {
+  z-index: 6;
+}
+
+#guide-step3 {
+  z-index: 5;
+}
+
+#guide-step4 {
+  z-index: 4;
+}
+
+#guide-step5 {
+  z-index: 3;
+}
+
+#guide-step6 {
+  z-index: 2;
+}
+
+#guide-done {
+  z-index: 1;
+}
+
+/* Defining the area of guide buttons */
+#guide-welcome-btn {
+  grid-area: btn1;
+}
+
+#guide-step1-btn {
+  grid-area: btn2;
+}
+
+#guide-step2-btn {
+  grid-area: btn3;
+}
+
+#guide-step3-btn {
+  grid-area: btn4;
+}
+
+#guide-step4-btn {
+  grid-area: btn5;
+}
+
+#guide-step5-btn {
+  grid-area: btn6;
+}
+
+#guide-step6-btn {
+  grid-area: btn7;
+}
+
+#guide-done-btn {
+  grid-area: btn8;
+}
+
+/* Defining the function of guide buttons */
+#guide-welcome-btn:focus ~ #guide-welcome {
+  z-index: 9;
+}
+
+#guide-step1-btn:focus ~ #guide-step1 {
+  z-index: 9;
+}
+
+#guide-step2-btn:focus ~ #guide-step2 {
+  z-index: 9;
+}
+
+#guide-step3-btn:focus ~ #guide-step3 {
+  z-index: 9;
+}
+
+#guide-step4-btn:focus ~ #guide-step4 {
+  z-index: 9;
+}
+
+#guide-step5-btn:focus ~ #guide-step5 {
+  z-index: 9;
+}
+
+#guide-step6-btn:focus ~ #guide-step6 {
+  z-index: 9;
+}
+
+#guide-done-btn:focus ~ #guide-done {
+  z-index: 9;
+}
